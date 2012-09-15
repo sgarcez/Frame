@@ -1,8 +1,8 @@
-from strings.models import String
+from comps.models import Device
 from django.contrib import admin
 from django.conf import settings
 
-class StringAdmin(admin.ModelAdmin):
+class DeviceAdmin(admin.ModelAdmin):
 
     def make_published(self, request, queryset):
         rows_updated = queryset.update(status='p')
@@ -26,5 +26,5 @@ class StringAdmin(admin.ModelAdmin):
         js = [
         ]
 
-admin.site.register(String, StringAdmin)
+admin.site.register(Device, DeviceAdmin)
 

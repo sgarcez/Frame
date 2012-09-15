@@ -151,7 +151,6 @@ INSTALLED_APPS = (
 
     # Project Applications
     'project',
-    'core',
     'strings',
     'comps',
     'frontend',
