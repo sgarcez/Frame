@@ -6,6 +6,7 @@ DEVICE_TYPES = (
     ('d', 'Desktop'),
 )
 
+
 class Device(models.Model):
     name = models.CharField(max_length=200, unique=True)
     section = models.CharField(max_length=50,
@@ -15,7 +16,8 @@ class Device(models.Model):
     screen_height = models.IntegerField(blank=False, help_text="in pixels.")
     screen_x = models.IntegerField(blank=False, help_text="in pixels.")
     screen_y = models.IntegerField(blank=False, help_text="in pixels.")
-    overlay_image = models.ImageField(upload_to='overlays', help_text="Only png images please.", blank=False, null=False)
+    overlay_image = models.ImageField(upload_to='overlays',
+        help_text="Only png images please.", blank=False, null=False)
     pub_date = models.DateTimeField(verbose_name='date published',
             auto_now_add=True, blank=True)
 

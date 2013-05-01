@@ -2,6 +2,7 @@ from comps.models import Device
 from django.contrib import admin
 from django.conf import settings
 
+
 class DeviceAdmin(admin.ModelAdmin):
 
     def make_published(self, request, queryset):
@@ -19,12 +20,12 @@ class DeviceAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Content', {
             'fields': ['name', 'section', 'description', 'overlay_image', 'screen_width',
-                'screen_height', 'screen_x', 'screen_y',]
+                'screen_height', 'screen_x', 'screen_y', ]
         }),
     ]
+
     class Media:
         js = [
         ]
 
 admin.site.register(Device, DeviceAdmin)
-

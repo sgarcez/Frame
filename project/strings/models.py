@@ -5,6 +5,7 @@ COPY_SECTIONS = (
     ('home', 'Home Page'),
 )
 
+
 class String(models.Model):
     string_id = models.CharField(max_length=50, unique=True)
     section = models.CharField(max_length=50,
